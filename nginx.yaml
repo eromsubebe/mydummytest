@@ -1,0 +1,11 @@
+---
+  - name: Install Nginx
+    hosts: all
+    remote_user: eromski
+    become: yes
+    gather_facts: no
+    pre_tasks:
+      - apt: update_cache=yes
+
+    roles:
+    - nginx  
